@@ -7,7 +7,7 @@
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
     
         {!! Form::label('status', '状態:') !!}
-        {{Form::select('status', ['未', '現', '済'])}}
+        {!! Form::select('status', ["未" => "これから", "現" => "進行中","済" => "完了済"]) !!}
 
 
 
