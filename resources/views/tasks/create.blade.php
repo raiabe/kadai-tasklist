@@ -2,25 +2,27 @@
 
 @section('content')
 
-<h1>タスク新規作成ページ</h1>
-    <div class="row">
-        <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-            {!! Form::model($task, ['route' => 'tasks.store']) !!}
-                <div class="form-group">
-                    {!! Form::label('status', '状態:') !!}
-                    {!! Form::select('status', ["未" => "これから", "現" => "進行中","済" => "完了済"],null,['class'=>'form-control']) !!}
-                </div>
-                
-                <div class="form-group">
-                    {!! Form::label('content', 'タスク:') !!}
-                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
-                </div>
-                
+
+<div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+        <h1>タスク新規作成ページ</h1>
         
-                    
-                {!! Form::submit('投稿',['class'=>'btn btn-primary']) !!}
-        
-            {!! Form::close() !!}
-        </div>
+        {!! Form::model($task, ['route' => 'tasks.store']) !!}
+            <div class="form-group">
+                {!! Form::label('status', '状態:') !!}
+                {!! Form::select('status', ["未" => "これから", "現" => "進行中","済" => "完了済"],null,['class'=>'form-control']) !!}
+            </div>
+            
+            <div class="form-group">
+                {!! Form::label('content', 'タスク:') !!}
+                {!! Form::text('content', null, ['class' => 'form-control']) !!}
+            </div>
+            
+    
+                
+            {!! Form::submit('投稿',['class'=>'btn btn-primary']) !!}
+    
+        {!! Form::close() !!}
     </div>
+</div>
 @endsection

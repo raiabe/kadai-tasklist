@@ -20,7 +20,7 @@
                         <td>{{$task->status}}</td>
                         <td>{{ $task->content }}</td>
                     </tr>
-                                    @endforeach
+                @endforeach
             </tbody>
         </table>
     @endif
